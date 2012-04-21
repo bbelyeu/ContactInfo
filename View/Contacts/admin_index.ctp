@@ -20,9 +20,9 @@
 		<td><?php echo h($contact['Contact']['created']); ?>&nbsp;</td>
 		<td><?php echo h($contact['Contact']['modified']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $contact['Contact']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $contact['Contact']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $contact['Contact']['id']), null, __('Are you sure you want to delete # %s?', $contact['Contact']['id'])); ?>
+			<?php echo $this->Html->link(__('View'), '/admin/contacts/view/'.$contact['Contact']['id']); ?>
+			<?php echo $this->Html->link(__('Edit'), '/admin/contacts/edit/'.$contact['Contact']['id']); ?>
+			<?php echo $this->Form->postLink(__('Delete'), '/admin/contacts/delete/'.$contact['Contact']['id'], null, __('Are you sure you want to delete # %s?', $contact['Contact']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -45,7 +45,7 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Contact'), '/admin/contact/add'); ?></li>
+		<li><?php echo $this->Html->link(__('New Contact'), '/admin/contacts/add'); ?></li>
 		<li><?php echo $this->Html->link(__('List Contact Types'), '/admin/contact_types'); ?> </li>
 		<li><?php echo $this->Html->link(__('New Contact Type'), '/admin/contact_types/add'); ?> </li>
 	</ul>

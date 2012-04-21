@@ -16,9 +16,9 @@
 		<td><?php echo h($contactType['ContactType']['created']); ?>&nbsp;</td>
 		<td><?php echo h($contactType['ContactType']['modified']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $contactType['ContactType']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $contactType['ContactType']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $contactType['ContactType']['id']), null, __('Are you sure you want to delete # %s?', $contactType['ContactType']['id'])); ?>
+			<?php echo $this->Html->link(__('View'), '/admin/contact_types/view/'.$contactType['ContactType']['id']); ?>
+			<?php echo $this->Html->link(__('Edit'), '/admin/contact_types/edit/'.$contactType['ContactType']['id']); ?>
+			<?php echo $this->Form->postLink(__('Delete'), '/admin/contact_types/delete/'.$contactType['ContactType']['id'], null, __('Are you sure you want to delete # %s?', $contactType['ContactType']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

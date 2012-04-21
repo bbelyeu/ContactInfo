@@ -1,7 +1,7 @@
 <div class="contactTypes form">
 <?php echo $this->Form->create('ContactType');?>
 	<fieldset>
-		<legend><?php echo __('Admin Add Contact Type'); ?></legend>
+		<legend><?php echo __('Add Contact Type'); ?></legend>
 	<?php
 		echo $this->Form->input('name');
 	?>
