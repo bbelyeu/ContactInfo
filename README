@@ -1,1 +1,4 @@
 CakePhp 2.x Plugin for storing & displaying contact info for a business website
+
+Setup:
+1. Import contacts.sql and contact_types.sql in Config/Schema/
