@@ -2,3 +2,13 @@ CakePhp 2.x Plugin for storing & displaying contact info for a business website
 
 Setup:
 1. Import contacts.sql and contact_types.sql in Config/Schema/
+
+2. Add the following line to your app/Config/bootstrap.php
+    CakePlugin::load('ContactInfo', array('routes' => true));
+
+3. Use /admin/contacts & /admin/contact_types to manage.
+
+*** If you'd like to use the contact form: 
+    1. Create a contact type named "email"
+    2. Add link to /contact_info/contacts/email
+    3. The email configuration may be changed in Config/email.php
